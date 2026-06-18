@@ -531,7 +531,7 @@
                 const commentText = row['Comment Text'] || 'No content.';
                 const username = row['Username'] || 'Anonymous';
                 const likes = row['Likes'] || 0; 
-                const imageHTML = row['Image'] ? `<img src="${row['Image']}" class="w-full max-h-64 object-cover rounded-lg border border-slate-200 mt-2 mb-3">` : '';
+               const imageHTML = row['Image'] ? `<img src="${row['Image']}" class="w-full max-h-72 object-contain bg-slate-100/50 rounded-lg border border-slate-200 mt-2 mb-3 p-2">` : '';
                 
                 const canEdit = currentUserRole === 'user' && row['Username'] === document.getElementById('sysUser').value;
                 const editButtonHTML = (row['id'] && canEdit) ? `
